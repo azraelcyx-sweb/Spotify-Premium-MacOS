@@ -1,4 +1,4 @@
-# Spotify-Adblocker-for-MacOS
+# Spotify-Adblocker-for-MacOS-REUPLOAD
 
 ### INSTALL : ``` bash (install file) ```          
 ### UPDATE : ``` same as install ```
