@@ -1,15 +1,18 @@
 # Spotify-Adblocker-for-MacOS
 
-INSTALL : bash (install file)
-UPDATE : same as install
-UNINSTALL : bash (uninstall file)
+              ```
+### INSTALL : bash (install file)
+              ```
+              
+### UPDATE : same as install
+### UNINSTALL : bash (uninstall file)
 
-Features:
-Blocks all banner/video/audio ads within the app
-Blocks logging (Sentry, etc)
-Unlocks the skip function for any track
-Blocks Spotify automatic updates (optional)
-Hides podcasts, episodes and audiobooks on Home Screen (optional)
+### Features:
+- Blocks all banner/video/audio ads within the app
+- Blocks logging (Sentry, etc)
+- Unlocks the skip function for any track
+- Blocks Spotify automatic updates (optional)
+- Hides podcasts, episodes and audiobooks on Home Screen (optional)
 
 Note:
 CYXblocker-Mac now requires codesign to sign the binaries after patching.
