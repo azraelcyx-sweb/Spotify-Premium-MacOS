@@ -1,8 +1,8 @@
 # Spotify-Adblocker-for-MacOS
 
-### INSTALL : ```bash (install file)              
-### UPDATE : ```same as install
-### UNINSTALL : ```bash (uninstall file)
+### INSTALL : ``` bash (install file) ```          
+### UPDATE : ``` same as install ```
+### UNINSTALL : ``` bash (uninstall file) ```
 
 ### Features:
 - Blocks all banner/video/audio ads within the app
