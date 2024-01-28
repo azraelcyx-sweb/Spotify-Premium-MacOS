@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CYXSPOTIBLOCKER_VERSION="1.2.22.982"
+CYXBLOCKER_VERSION="1.2.22.982"
 
 # dependencies check
 command -v perl >/dev/null || { echo -e "\nperl was not found, exiting...\n" >&2; exit 1; }
@@ -102,17 +102,17 @@ UPDATE_PATCH='s|\x64(?=\x65\x73\x6B\x74\x6F\x70\x2D\x75\x70)|\x00|g'
 # Credits
 echo
 echo "************************"
-echo "CYXSpotiBlocker-Mac by @AzraelCYX"
+echo "CYXBLOCKER-Mac by @AzraelCYX"
 echo "************************"
 echo
 
 # Report versions
 echo -e "Spotify version: ${CLIENT_VERSION}"
-echo -e "CYXSpotiBlocker-Mac version: ${CYXSPOTIBLOCKER_VERSION}\n"
+echo -e "CYXBLOCKER-Mac version: ${CYXSPOTIBLOCKER_VERSION}\n"
 
-if [[ $(ver "${CLIENT_VERSION}") -lt $(ver "${CYXSPOTIBLOCKER_VERSION}") ]]; then
-  echo "This version of CYXSpotiBlocker-Mac is not compatible with your Spotify version."
-  echo "Pleas use an older version of CYXSpotiBlocker-Mac or update Spotify."
+if [[ $(ver "${CLIENT_VERSION}") -lt $(ver "${CYXBLOCKER_VERSION}") ]]; then
+  echo "This version of CYXBLOCKER-Mac is not compatible with your Spotify version."
+  echo "Pleas use an older version of CYXBLOCKER-Mac or update Spotify."
   exit; fi
 
 if [[ "${SKIP_CODE_SIGNATURE}" == "true" ]]; then
@@ -132,9 +132,9 @@ if [[ ! -f "${XPUI_SPA}" ]]; then
 else
   if [[ "${FORCE_FLAG}" == "false" ]]; then
     if [[ -f "${XPUI_BAK}" ]] || [[ -f "${APP_BINARY_BAK}" ]]; then
-      echo "CYXSpotiBlocker backup found, CYXSpotiBlocker has already been used on this install."
-      echo -e "Re-run CYXSpotiBlocker using the '-f' flag to force xpui patching.\n"
-      echo "Skipping xpui patches and continuing CYXSpotiBlocker..."
+      echo "CYXBLOCKER backup found, CYXBLOCKER has already been used on this install."
+      echo -e "Re-run CYXBLOCKER using the '-f' flag to force xpui patching.\n"
+      echo "Skipping xpui patches and continuing CYXBLOCKER..."
       XPUI_SKIP="true"
     else
       echo "Creating backup..."
@@ -159,17 +159,17 @@ else
 if [[ "${XPUI_SKIP}" == "false" ]]; then
   echo "Extracting xpui..."
   unzip -qq "${XPUI_SPA}" -d "${XPUI_DIR}"
-  if grep -Fq "CYXSpotiBlocker" "${XPUI_JS}"; then
-    echo -e "\nWarning: Detected CYXSpotiBlocker patches but no backup file!"
+  if grep -Fq "CYXBLOCKER" "${XPUI_JS}"; then
+    echo -e "\nWarning: Detected CYXBLOCKER patches but no backup file!"
     echo -e "Further xpui patching not allowed until Spotify is reinstalled/upgraded.\n"
-    echo "Skipping xpui patches and continuing CYXSpotiBlocker..."
+    echo "Skipping xpui patches and continuing CYXBLOCKER..."
     XPUI_SKIP="true"
     rm "${XPUI_BAK}" 2>/dev/null
     rm -rf "${XPUI_DIR}" 2>/dev/null
   else
     rm "${XPUI_SPA}"; fi; fi
 
-echo "Applying CYXSpotiBlocker patches..."
+echo "Applying CYXBLOCKER patches..."
 
 if [[ "${XPUI_SKIP}" == "false" ]]; then
   # Remove Empty ad block
@@ -212,7 +212,7 @@ if [[ "${UPDATE_FLAG}" == "true" ]]; then
 # Rebuild xpui.spa
 if [[ "${XPUI_SKIP}" == "false" ]]; then
   echo "Rebuilding xpui..."
-  echo -e "\n//# CYXSpotiBlocker was here" >> "${XPUI_JS}"; fi
+  echo -e "\n//# CYXBLOCKER was here" >> "${XPUI_JS}"; fi
 
 # Zip files inside xpui folder
 if [[ "${XPUI_SKIP}" == "false" ]]; then
@@ -223,4 +223,4 @@ if [[ "${XPUI_SKIP}" == "false" ]]; then
 echo "Signing Spotify..."
 codesign -f --deep -s - "${APP_PATH}" 2>/dev/null;
 
-echo -e "CYXSpotiBlocker finished patching!\n"
+echo -e "CYXBLOCKER finished patching!\n"
