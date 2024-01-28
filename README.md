@@ -1,4 +1,4 @@
-# Spotify-Free-Prem-MacOS
+# Spotify-Premium-MacOS
 
 ### INSTALL : ``` bash (install file) ```          
 ### UPDATE : ``` same as install ```
