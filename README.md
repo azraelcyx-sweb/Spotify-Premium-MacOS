@@ -1,4 +1,4 @@
-# Spotify-Adblocker-for-MacOS-REUPLOAD
+# Spotify-Free-Prem-MacOS
 
 ### INSTALL : ``` bash (install file) ```          
 ### UPDATE : ``` same as install ```
