@@ -19,7 +19,7 @@ done
 # Credits
 echo
 echo "************************"
-echo "CYXSpotiBlocker-Mac by @AzraelCYX"
+echo "CYXBLOCKER-Mac by @AzraelCYX"
 echo "************************"
 echo
 
